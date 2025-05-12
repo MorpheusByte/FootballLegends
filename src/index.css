@@ -12,3 +12,10 @@ body{
   background-attachment: fixed;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.title{
+  border: 1px solid red;
+  background-color: rgba(194, 193, 193, 0.508);
+  padding: 10px;
+  border-radius: 1rem;
+}
