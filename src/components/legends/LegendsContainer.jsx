@@ -1,38 +1,18 @@
-import React from "react";
-import { Col, Container, Row ,Card, Button} from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row } from "react-bootstrap";
 import { data } from "../../helpers/data";
+import LegendCard from "./LegentCard";
 
-const LegendsContainer = () => {
-    
-
-
+const LegendContainer = () => {
   return (
-    <Container className="my-3 card-container">
+    <Container className="my-3 p-3 card-container">
       <Row xs={1} md={2} xl={3} className="justify-content-center g-3">
-        {data.map((player) => (
-          <Col>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={player.img}/>
-              <Card.Header>
-                <Card.Title>
-                    {player.name}
-                </Card.Title>
-              </Card.Header>
-              <ul>
-              {
-                player.statistics.map((item)=>(
-                    <li className="list-unstyled text-start p-1 fw-bold display-6">⚽️ {item}</li>
-                ))
-              }
-                
-              </ul>
-              <p>Carear Years {player.official_career}</p>
-            </Card>
-          </Col>
+        {data.map((legend) => (
+          <LegendCard legend={legend} key={legend.id} />
         ))}
       </Row>
     </Container>
   );
 };
 
-export default LegendsContainer;
+export default LegendContainer;
