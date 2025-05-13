@@ -6,7 +6,7 @@ const LegendCard = ({legend}) => {
 
   return (
     <Col >
-               <Card style={{ width: "18rem" }}  onClick={()=>setShow(!show)} >
+               <Card className='player-card'  onClick={()=>setShow(!show)} >
                  {!show ? (
                    <Card.Img variant="top" src={legend.img} />
                  ) : (

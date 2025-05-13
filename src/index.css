@@ -1,6 +1,6 @@
 *{
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding:0;
   box-sizing: border-box;
 }
 
@@ -10,17 +10,39 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .title{
-  background-color: rgba(194, 193, 193, 0.508);
-  padding: 10px;
+  /* border:1px solid red; */
+  background-color: rgba(226, 221, 221,0.5);
+  padding:10px;
   border-radius: 1rem;
 }
 
 .card-container{
-  /* background-color: rgb(30, 28, 28,0.5); */
-  background-color: white;
-  min-height: 300px;
+  background-color: rgba(18, 17, 17,0.5);
+  min-height: 350px;
+}
+
+.player-card{
+  height: 400px !important;
+  overflow: hidden;
+
+  & img{
+    height: 100%;
+    width:100%;
+    transition:all 0.3s;
+    filter:sepia(0.5)
+
+  }
+
+  &:hover{
+    box-shadow:3px 3px 20px rgba(0,0,0,0.5);
+    &img{
+      transform:scale(1.1);
+      filter:none;
+    }
+  }
+
 }
